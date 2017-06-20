@@ -1,0 +1,56 @@
+[{
+    "imageurl": "Images/waffles.jpg",
+    "name": "Waffles!",
+    "price" : "$9.50",
+    "Ingredients": "Flour,Sugar,Milk, Random Powders",
+    "stock":"Made to Order"
+  },
+    {
+    "imageurl": "Images/apple-pie.jpg",
+    "name": "Apple Pie!",
+    "price" : "$15",
+    "Ingredients": "Apples, sugar, flour, ",
+    "stock":"10"
+  },
+    {
+    "imageurl": "Images/blueberrymuffin.jpg",
+    "name": "Blueberry Muffins!",
+    "price" : "$4",
+    "Ingredients": "Blueberries, sugar, flour, ",
+    "stock":"36"
+  },
+ {
+    "imageurl": "Images/carmelbrownie.jpg",
+    "name": "Carmel Brownies!",
+    "price" : "$11",
+    "Ingredients": "CoaCoa, Carmel, sugar, flour, ",
+    "stock":"55"
+  },
+ {
+    "imageurl": "Images/chocolatechip.jpg",
+    "name": "Chocolate Chip Cookies!",
+    "price" : "$6",
+    "Ingredients": "Chocolate Chips, brown sugar, sugar, flour, ",
+    "stock":"120"
+  },
+ {
+    "imageurl": "Images/stawberrydanishjpg.jpg",
+    "name": "Strawberry Danish!",
+    "price" : "$4.50",
+    "Ingredients": "strawberries, sugar, flour, ",
+    "stock":"4"
+  },
+    {
+    "imageurl": "Images/jalapenobread.jpg",
+    "name": "Jalapeno Bread!",
+    "price" : "$7",
+    "Ingredients": "bleached flour, jalapenos, sugar, yeast, ",
+    "stock":"12"
+  },
+ {
+    "imageurl": "Images/whitebread.jpg",
+    "name": "plain ole white bread!",
+    "price" : "$4",
+    "Ingredients": "bleached flour,  sugar, yeast, ",
+    "stock":"10"
+  }]

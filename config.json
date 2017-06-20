@@ -1,0 +1,5 @@
+{
+    "connectionString": "mongodb://localhost:27017/usersdb",
+    "apiUrl": "http://localhost:3000/api",
+    "secret": "Your own secret sauce.. mmmmm"
+}

@@ -1,0 +1,26 @@
+
+body {
+    padding: 20px 0;
+   background-color: lightcyan
+}
+
+.flash-message {
+    margin-top: 20px;
+}
+li{
+display: inline-block;
+margin-right: -4px;
+text-align: center
+
+}
+a:hover {
+   color: red;
+}
+
+p.products {
+    padding:10px 10px 15px;
+}
+ul.products{
+    background-color:whitesmoke
+}
+

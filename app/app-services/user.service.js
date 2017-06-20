@@ -1,0 +1,66 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('app')
+        .factory('UserService', Service);
+
+    //This is the user service. All of these will be sent to the services directory to be process my mongoskin and appended to the DB
+    
+    function Service($http, $q) {
+        var service = {};
+
+        service.GetCurrent = GetCurrent;
+        service.GetAll = GetAll;
+        service.GetById = GetById;
+        service.GetByUsername = GetByUsername;
+        service.Create = Create;
+        service.Update = Update;
+        service.Delete = Delete;
+        
+
+        return service;
+        
+        function GetCurrent() {
+            return $http.get('/api/users/current').then(handleSuccess, notlogged);
+        }
+
+        function GetAll() {
+            return $http.get('/api/users').then(handleSuccess, handleError);
+        }
+
+        function GetById(_id) {
+            return $http.get('/api/users/' + _id).then(handleSuccess, handleError);
+        }
+
+        function GetByUsername(username) {
+            return $http.get('/api/users/' + username).then(handleSuccess, handleError);
+        }
+
+        function Create(user) {
+            return $http.post('/api/users', user).then(handleSuccess, handleError);
+        }
+
+        function Update(user) {
+            return $http.put('/api/users/' + user._id, user).then(handleSuccess, handleError);
+        }
+
+        function Delete(_id) {
+            return $http.delete('/api/users/' + _id).then(handleSuccess, handleError);
+        }
+
+        // Handles the data based upon fail or success...
+
+        function handleSuccess(res) {
+            return res.data;
+        }
+
+        function handleError(res) {
+            return $q.reject(res.data);
+        }
+        function notlogged (res){
+            return "user isnt logged in"
+        }    
+    }
+
+})();

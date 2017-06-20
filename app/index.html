@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Sisters Bakery</title>
+    <!-- Latest compiled and minified CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="app-content/app.css" rel="stylesheet" />
+     <!-- All the scripts for controllers/services -->
+</head>
+<body class="container">
+    <!-- header -->
+   <header id="header">
+     
+     <img class="img-responsive center-block" class="img-responsive" ng-src="Images\Logo\tslogo.PNG" class="center-block" > 
+     
+     <!-- the navigation bar -->
+     <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/">TwoSistersBakery.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+        
+      <li><a href="#/account">account</a></li>
+    </ul>
+        
+       
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+           
+        <li><a href="/login">login</a></li>
+          <li><a href="/login" target="_self">Logout</a></li>
+       
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+        
+        
+  </div>
+</nav>
+           </header>
+
+    <!-- main -->
+    <main ui-view></main>
+
+    <!-- will add actual footer later -->
+    <footer></footer>
+
+    <!-- AngularJS Libs -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/product.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
+    <script src= "admin/adminctrl.js"></script>
+</body>
+</html>

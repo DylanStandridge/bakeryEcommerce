@@ -1,0 +1,28 @@
+<!-- This partial to our SPA relays the products to our customer as well as allows filters and searching of anything... Everyone can spell brownie right?!-->
+
+
+<div ng-show="vm.user.username != null" class="text-right"><h4>Hello, {{vm.user.firstName}}!</h4></div>
+<div ng-show="vm.user.username == null" class="text-right"><h4>{{vm.loggedin}}</h4></div>
+    <label for="repeatSelect"> Filter By Category: </label> 
+    <select name="repeatSelect" id="repeatSelect" ng-model="vm.filters">
+      <option ng-repeat="cat in vm.cats" value="{{cat}}">{{cat}}</option>
+    </select>
+     <div class="nav navbar-nav navbar-right">
+         <i class="glyphicon glyphicon-search"></i>
+     <input placeholder="Search" ng-model="vm.search" type="text">
+        
+        
+         </div>
+     <br>
+     <br>
+     <br>
+     <ul class="products">        
+            <li ng-repeat="product in vm.productlist | filter: vm.filters | filter:vm.search">
+                <p class=products>
+                <img ng-src="/app/uploads/{{product.url}}" alt="coming soon!" height="200px" width="200px"> 
+                <h4>{{product.name}}</h4>
+                <p>{{product.price | currency}}</p>
+                </p>
+            </li>
+               
+    </ul>
